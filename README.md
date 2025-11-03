@@ -1,2 +1,2 @@
 # My-Website
-This is a Education website
+This is an Education website
