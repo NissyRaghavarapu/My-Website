@@ -1,1 +1,261 @@
-<p>Hello World</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BrightPath Academy — Learn Full-Stack, DSA, AI/ML & Data Science</title>
+  <meta name="description" content="BrightPath Academy — Practical, project-based courses in Full-Stack, DSA, AI/ML and Data Science. Flexible schedules, mentor support, placement help." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --gap:20px; --maxw:1100px;
+      --ff: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:var(--ff); background: linear-gradient(180deg,#071021 0%, #071226 60%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.5; padding:40px 20px;
+      display:flex; justify-content:center;
+    }
+    .wrap{width:100%; max-width:var(--maxw)}
+
+    /* Header */
+    header{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:28px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:46px; height:46px; border-radius:12px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#06b6d4); font-weight:700}
+    .brand h1{font-size:18px; margin:0}
+    nav{display:flex; gap:18px; align-items:center}
+    nav a{color:var(--muted); text-decoration:none; font-weight:600}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:stretch; margin-bottom:28px}
+    .hero-card{background:var(--card); padding:28px; border-radius:var(--radius); box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+    .eyebrow{color:var(--accent); font-weight:700; letter-spacing:0.6px}
+    .hero h2{margin:8px 0 12px; font-size:28px}
+    .hero p{color:var(--muted); margin:0 0 18px}
+    .cta-row{display:flex; gap:12px}
+    .btn{background:var(--accent); color:white; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700}
+    .btn.secondary{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
+
+    /* Courses grid */
+    .courses{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+    .course{background:var(--glass); padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.03)}
+    .course h3{margin:0 0 8px}
+    .meta{color:var(--muted); font-size:14px}
+    .tags{margin-top:12px; display:flex; gap:8px; flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.03); padding:6px 8px; border-radius:8px; font-size:13px}
+
+    /* Right column highlights */
+    .highlights{display:flex; flex-direction:column; gap:12px}
+    .stat{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:14px; border-radius:12px}
+    .stat strong{display:block; font-size:20px}
+    .stat p{margin:4px 0 0; color:var(--muted)}
+
+    /* Features */
+    .features{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:28px 0}
+    .feature{background:var(--card); padding:18px; border-radius:12px}
+    .feature h4{margin:0 0 8px}
+    .feature p{color:var(--muted); margin:0}
+
+    /* FAQ and contact */
+    .lower{display:grid; grid-template-columns:1fr 380px; gap:18px; margin-bottom:28px}
+    .faq .item{background:var(--card); padding:12px; border-radius:10px; margin-bottom:8px}
+    .faq button{width:100%; text-align:left; background:none; border:none; color:inherit; font-weight:700; padding:8px 0}
+    .faq .answer{color:var(--muted); padding-top:6px; display:none}
+    .contact{background:var(--card); padding:18px; border-radius:12px}
+    .contact label{display:block; font-size:13px; margin-bottom:6px}
+    .contact input, .contact textarea{width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit}
+    .contact button{margin-top:10px}
+
+    footer{margin-top:20px; color:var(--muted); display:flex; justify-content:space-between; align-items:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .courses{grid-template-columns:1fr}
+      .lower{grid-template-columns:1fr}
+    }
+    @media (max-width:520px){
+      body{padding:18px}
+      .features{grid-template-columns:1fr}
+      nav{display:none}
+      .logo{width:40px;height:40px}
+      .hero h2{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">BP</div>
+        <div>
+          <h1>BrightPath Academy</h1>
+          <div style="color:var(--muted); font-size:13px">Upskill • Build projects • Get hired</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#courses">Courses</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">Learn with Mentors</div>
+        <h2>Industry-focused programs: Full-Stack, DSA, AI/ML & Data Science</h2>
+        <p>Practical curriculum, live projects, interview training and career support. Flexible batches — weekdays & weekends. Start with a free trial class.</p>
+        <div class="cta-row">
+          <a class="btn" href="#contact">Book a Free Trial</a>
+          <a class="btn secondary" href="#courses">See Courses</a>
+        </div>
+
+        <div style="margin-top:18px; display:flex; gap:12px; align-items:center">
+          <div style="background:rgba(255,255,255,0.02); padding:8px 10px; border-radius:10px">
+            <strong style="font-size:16px">4.8</strong>
+            <div style="color:var(--muted); font-size:13px">(2.3k reviews)</div>
+          </div>
+          <div style="color:var(--muted); font-size:13px">Placement support • Peer projects • Career coaching</div>
+        </div>
+      </div>
+
+      <aside class="highlights">
+        <div class="stat">
+          <strong>120+</strong>
+          <p>Hands-on projects</p>
+        </div>
+        <div class="stat">
+          <strong>85%</strong>
+          <p>Students placed within 6 months</p>
+        </div>
+        <div class="stat">
+          <strong>Mentor-led</strong>
+          <p>Small batch mentoring</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="courses">
+      <h2 style="margin-top:0">Popular Programs</h2>
+      <div class="courses">
+        <!-- Full Stack -->
+        <article class="course">
+          <h3>Full-Stack Web Development</h3>
+          <div class="meta">Duration: 6 months • Mode: Online live • Level: Beginner → Advanced</div>
+          <p style="color:var(--muted); margin-top:10px">Build real-world applications using HTML/CSS, JavaScript, React, Node.js, Express and PostgreSQL. Deploy projects and prepare for engineering interviews.</p>
+          <div class="tags">
+            <span class="tag">Projects: 12</span>
+            <span class="tag">Placement Assistance</span>
+            <span class="tag">Live Mentorship</span>
+          </div>
+        </article>
+
+        <!-- DSA -->
+        <article class="course">
+          <h3>Data Structures & Algorithms (DSA)</h3>
+          <div class="meta">Duration: 4 months • Mode: Live & Self-paced • Level: Beginner → Expert</div>
+          <p style="color:var(--muted); margin-top:10px">Master arrays, trees, graphs, dynamic programming and complexity analysis. Weekly problem sets, mock interviews and contest-style challenges.</p>
+          <div class="tags">
+            <span class="tag">Mock Interviews</span>
+            <span class="tag">Weekly Challenges</span>
+            <span class="tag">Certification</span>
+          </div>
+        </article>
+
+        <!-- AI/ML -->
+        <article class="course">
+          <h3>AI / Machine Learning</h3>
+          <div class="meta">Duration: 5 months • Mode: Live • Level: Intermediate</div>
+          <p style="color:var(--muted); margin-top:10px">Learn supervised & unsupervised learning, neural networks, model evaluation, and deploy models to production. Hands-on projects using Python and popular ML libraries.</p>
+          <div class="tags">
+            <span class="tag">Notebooks</span>
+            <span class="tag">Model Deployment</span>
+            <span class="tag">Capstone</span>
+          </div>
+        </article>
+
+        <!-- Data Science -->
+        <article class="course">
+          <h3>Data Science</h3>
+          <div class="meta">Duration: 5 months • Mode: Live • Level: Beginner → Intermediate</div>
+          <p style="color:var(--muted); margin-top:10px">Statistics, data wrangling, visualization, SQL, exploratory analysis and end-to-end data projects. Learn to tell stories with data and build dashboards.</p>
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Dashboards</span>
+            <span class="tag">Real Datasets</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="features" aria-label="Why BrightPath">
+      <div class="feature">
+        <h4>Project-first learning</h4>
+        <p>Every module includes a mini-project that builds into your portfolio. Employers care about what you've built — not just certificates.</p>
+      </div>
+      <div class="feature">
+        <h4>Mentor & Community</h4>
+        <p>Weekly mentor office hours, community study groups and peer code reviews to keep you accountable and growing.</p>
+      </div>
+      <div class="feature">
+        <h4>Career Support</h4>
+        <p>Resume reviews, mock interviews, and placement support — we help you get interview-ready and connect with hiring partners.</p>
+      </div>
+    </section>
+
+    <section class="lower">
+      <div class="faq" id="faq">
+        <h3>Frequently Asked Questions</h3>
+        <div class="item">
+          <button aria-expanded="false">What is the time commitment?</button>
+          <div class="answer">Typical commitment is 8-12 hours/week for live batches. Self-paced content allows flexible timing.</div>
+        </div>
+        <div class="item">
+          <button aria-expanded="false">Do you provide certificates?</button>
+          <div class="answer">Yes — on completion of the capstone project and assessments, you receive a completion certificate and a shareable portfolio link.</div>
+        </div>
+        <div class="item">
+          <button aria-expanded="false">Are there prerequisites?</button>
+          <div class="answer">Basic programming knowledge helps for AI/ML and Full-Stack. We offer bridging modules for beginners.</div>
+        </div>
+      </div>
+
+      <aside class="contact" id="contact">
+        <h3>Contact & Free Trial</h3>
+        <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll get back to you.');">
+          <label for="name">Full name</label>
+          <input id="name" placeholder="Your name" required>
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@email.com" required>
+          <label for="message">Message (optional)</label>
+          <textarea id="message" rows="4" placeholder="Interested in Full-Stack / DSA / AI..."></textarea>
+          <button class="btn" type="submit">Request Free Trial</button>
+        </form>
+      </aside>
+    </section>
+
+    <footer>
+      <div>© <strong>BrightPath Academy</strong> — Learn. Build. Grow.</div>
+      <div style="color:var(--muted); font-size:13px">Designed for clarity • Responsive • Accessible</div>
+    </footer>
+  </div>
+
+  <script>
+    // Simple FAQ toggle
+    document.querySelectorAll('.faq .item').forEach(item=>{
+      const btn = item.querySelector('button');
+      const ans = item.querySelector('.answer');
+      btn.addEventListener('click', ()=>{
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', open? 'false' : 'true');
+        ans.style.display = open? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
+
